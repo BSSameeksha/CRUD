@@ -1,9 +1,14 @@
 {
-    "users": [
-        {
-            "name" : "sameeksha",
-            "id" : 1,
-            "role" : "developer"
-        }
-    ]
+  "users": [
+    {
+      "name": "sameeksha",
+      "id": "1",
+      "role": "developer"
+    },
+    {
+      "id": "2",
+      "name": "B. SAI SAMEEKSHA",
+      "role": "1"
+    }
+  ]
 }

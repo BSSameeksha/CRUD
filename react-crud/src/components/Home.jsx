@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import axios from "axios"
 import { Link } from 'react-router-dom'
-
 const Home = () => {
-    let [state, setate]= useState([])
-    useEffect(()=>{
-        axios.get("http://localhost:7777/users")
-        .then((res)=>{
+    let [state , setState] = useState([])
+
+    useEffect(() => {
+         axios.get("http://localhost:8081/users")
+         .then((res) => {
             console.log(res.data);
-            setate(res.data)
-            
-        })
-    }, [])
+            setState(res.data)
+
+         })
+    } , [])
+
     // delete
 
     let delete1 = (id) => {
-        axios.delete(`http://localhost:7777/users`)
+        axios.delete(`http://localhost:8081/users/${id}`)
         .then(() => {
             window.location.reload()
             window.alert("data is deleted")
@@ -53,7 +54,6 @@ const Home = () => {
                 }
             </tbody>
          </table>
-      
     </div>
   )
 }

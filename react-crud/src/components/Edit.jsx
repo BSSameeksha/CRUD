@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
@@ -29,7 +29,7 @@ const Edit = () => {
         let payload = {name , id , role}
         console.log(payload);
 
-       axios.put(`http://localhost:7777/users`+userid,payload)
+       axios.put("http://localhost:8081/users/"+userid,payload)
        .then(() => {
         window.alert("data is updated")
        })
