@@ -11,7 +11,7 @@ const Create = () => {
       e.preventDefault()
       let payload = {name , id , role}
       console.log(payload);
-      axios.post("http://localhost:8081/users",payload)
+      axios.post("http://localhost:7777/users",payload)
       .then(() => {
         window.alert("data is created")
       })
